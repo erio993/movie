@@ -1,0 +1,704 @@
+*{
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    height: 140vh;
+    font-family: sans-serif;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.nav li{
+    list-style: none;
+    padding:10px 25px 10px 25px;
+    
+}
+.nav a:hover{
+    color: gold;
+}
+.nav a{
+    left: 60px;
+    text-decoration: none;
+    position: relative;
+    color: #ffffffc5;
+    font-size: 14px;
+    letter-spacing: 3.1px;
+    padding: 0 10px;
+    font-family: "Gill Sans", sans-serif;
+    margin: -10px;
+}
+.nav a::after{
+    content: "";
+    position: absolute;
+    background-color: gold;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.6s;
+}
+.nav a:hover::after{
+    width: 100%;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+   
+    
+}
+.logo{
+   color:rgb(0, 0, 0) ;
+    border-radius: 10px;
+    width: 100px;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: "Gill Sans", sans-serif;
+    text-shadow: 0px 0px 7px  rgb(255, 0, 0);  
+    
+}
+.search{
+  width: 300px;
+  position: absolute;
+  right: 90px;
+  
+}
+.span{
+    color: #ffffffc5;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+span{
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 5px  rgb(255, 225, 0);
+
+}
+input{
+    width: 400px;
+    height: 35px;
+    border-radius: 15px;
+    border: 1px solid;
+    margin-left: 100px;
+    text-align: center;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    text-align: center;
+    height: 100vw;
+    height: 100vh;
+    
+}
+
+section::before{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url(3d-cinema-film-projector-with-popcorn.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   filter: brightness(50%);
+}
+
+
+.film-container {
+    position: relative;
+    width: 180px;
+    height: 250px;
+   margin: 20px;
+  overflow: hidden;
+
+}
+.image{
+    display: block;
+  
+    
+    
+}
+
+.film-image {
+    width: 180px;
+    height: 250px;
+    filter: blur(2px);  
+    transition: filter 0.3s ease-in-out;  
+    display: block;
+}
+
+
+.film-container:hover .film-image {
+    filter: blur(0);  
+   
+}
+
+
+.film-container::before,
+.film-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: -250px;
+    background-color: black;
+}
+
+.film-container::before {
+    top: 0;
+}
+
+.film-container::after {
+    bottom: 0;
+}
+
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 180px;
+    height: 250px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    opacity: 1; 
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+}
+.overlay1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 250px;
+    width: 180px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    opacity: 1; 
+    cursor: pointer;
+    
+}
+.overlay .box .play-button {
+    font-size: 20px;
+    color: gold;
+    text-align: center;
+    
+    margin-top: 150px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+}
+
+.span{
+    color: #ffffffc5;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+span{
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 10px  rgb(255, 225, 0);
+
+}
+.overlay1 .box2 .star1 {
+    font-size: 30px;
+    margin-bottom: 150px;
+    
+    color: gold;
+    transition: opacity 0.3s ease;
+}
+
+
+.film-container:hover .ktab {
+opacity: 1;
+} 
+
+.film-container:hover .overlay {
+    opacity: 1;  
+}
+
+.film-container:hover .star1 {
+    opacity: 1;  
+}
+.film-container:hover .play-button{
+    opacity: 1;
+}
+
+.film-container:hover .play-button {
+    animation: pulse 1s infinite;
+}
+.film-container:hover .star1 {
+    animation: pulsee 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes pulsee {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hd{
+    border: 1px solid orange;
+    background-color: orange;
+    border-radius: 5px;
+    
+}
+p{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 14px;
+}
+input{
+    width: 400px;
+    height: 35px;
+    border-radius: 15px;
+    border: 1px solid;
+    margin-left: 100px;
+    text-align: center;
+}
+.menu{
+    text-align: center;
+    
+    background: rgb(12, 12, 25);
+         
+     }
+     .menu a{
+         color: rgb(255, 255, 255);
+         text-decoration: none;
+         padding: 8px 15px;
+         display: inline-block;
+         font-size: 20px;
+         
+
+     }
+     .menu a:hover{
+         color: gold;
+         background-color: orange;
+         border-radius: 10px;
+     }
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.image{
+margin: 10px;
+    width: 350px;
+    height: 400px;
+    border: 3px solid rgb(138, 138, 138);
+    border-radius: 8px;
+
+}
+.film{
+    padding: 40px;
+          display: flex;
+    justify-content: space-between;
+}
+.a1{
+    text-decoration: none;
+}
+.p1{
+    color: rgb(255, 255, 255);
+    font-family: "Gill Sans", sans-serif;
+    margin-top: 70px;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    background-color: rgba(82, 80, 79, 0.406);
+   padding: 10px;
+   border-radius: 10px;
+   filter: brightness(50%);
+   transition: 1s;
+}
+.p1:hover{
+    color: rgba(125, 122, 122, 0.836);
+    background-color: gold;
+}
+.lien-a{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 100px 100px 100px 100px ;
+  
+}
+
+.iframe-container {
+    width: 100%; /* Largeur en pourcentage */
+    max-width: 800px; /* Largeur maximale */
+    /* Centrer horizontalement */
+    overflow: hidden; /* Cache tout débordement */
+    margin-top: 500px;
+    margin-left: -400px;
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .slider {
+   
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    overflow: hidden; /* Cache les parties hors de la fenêtre du slider */
+    margin: 0 auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    position: relative;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: -158px;
+
+  }
+  
+  /* Conteneur des slides */
+  .slides {
+    display: flex; /* Met les slides côte à côte */
+    transition: transform 0.5s ease-in-out; /* Transition douce pour le mouvement */
+  }
+  
+  /* Chaque slide */
+  .slide {
+    min-width: 100%; /* Chaque slide prend la largeur complète */
+    
+  }
+  
+
+  
+  /* Animation cyclique */
+
+  /* Navigation manuelle (boutons radio) */
+  
+  
+  /* Navigation avec des indicateurs */
+  .navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .navigation label {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+.parag2{
+ display: flex;
+
+ 
+
+}
+.parag2 .p3{
+    
+    color: #fd0000;
+    margin-left: 220px;
+    height: 20px;
+    width: 85px;
+    font-family: 'Netflix Sans', Arial, Helvetica, sans-serif;
+    font-weight: 400; /* Normal */
+    font-size: 1.2rem;
+    margin: 20px;
+    text-shadow: 0px 0px 10px  rgb(255, 0, 0);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif; /* Priorité : Roboto > Arial > Helvetica */
+}
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('netflix-sans.woff2') format('woff2'),
+         url('netflix-sans.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  /* styles.css */
+/* styles.css */
+
+
+#playButton{
+  width: 40px;
+}
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  width: 800px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.image-container {
+  position: relative;
+  width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+}
+
+.imae {
+  width: 800px;
+  display: block;
+  
+  transition: 1.5s;
+}
+
+.image-container:hover .imae {
+  filter: blur(4px); /* Blur effect on hover */
+
+}
+
+.overlaye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition:  1.5s ;
+}
+
+.image-container:hover .overlaye {
+  opacity: 1;
+ 
+}
+
+/* Navigation Arrows */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: rgba(184, 178, 178, 0.507);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.prev {
+  left: 10px;
+  margin-top: -480px;
+  margin-left: 1px;
+}
+
+.next {
+  right: 10px;
+  margin-top: -480px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Show the first slide by default */
+.slide:first-child {
+  display: block;
+}
+.imag{
+  width: 300px;
+  border-radius: 8px;
+  margin-right: 300px;
+  margin-top: 200px;
+  position: relative;
+  transition: 2s;
+
+}
+.imag:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.imag2:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+.images{
+  position: relative;
+display: flex;
+flex-wrap: wrap;
+}
+.imag2{
+  width: 300px;
+  border-radius: 8px;
+  margin-right: 300px;
+  margin-top: -10px;
+  position: fixed;
+  transition: 2s;
+ 
+
+}
+.paragraph{
+  display: flex;
+  position: fixed;
+  margin-left: 380px;
+  margin-top: -300px;
+  font-family: "Times New Roman", Times, serif;
+
+}
+.paragraph p{
+  font-family:American Typewriter, serif	;
+  font-size: 20px;
+  color: #ffffff;
+  transition: 1s;
+  
+
+}
+
+.logoo{
+  width: 350px;
+  height: 200px;
+  position: fixed;
+  margin-left: 350px;
+  margin-top: -450px;
+  transition: 3s;
+
+  
+  
+}
+
+.logooo{
+  width: 190px;
+  height: 120px;
+  position: fixed;
+  margin-left: 400px;
+  margin-top: -430px;
+  transition: 3s;
+
+  
+  
+}
+
+
+
+.custom-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 12px 24px; /* Padding inside the button */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove borders */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  position: fixed;
+  margin-top: 230px;
+}
+
+.custom-button:hover {
+  background-color: #f10606; /* Darker green on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.custom-button:active {
+  background-color: #3e8e41; /* Even darker green when pressed */
+  transform: scale(0.95); /* Slightly reduce size */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.custom-buttonn {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 12px 24px; /* Padding inside the button */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove borders */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  position: fixed;
+  margin-top: 280px;
+}
+
+.custom-buttonn:hover {
+  background-color: #ff0000; /* Darker green on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.custom-buttonn:active {
+  background-color: #3e8e41; /* Even darker green when pressed */
+  transform: scale(0.95); /* Slightly reduce size */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+i{
+  position: fixed;
+  margin-top: 245px;
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+.logo-film i{
+  position: fixed;
+  margin-top: 293px;
+  font-size: 15px;
+  right: 202px;
+}
+.log{
+  width: 170px;
+  height: 120px;
+  position: fixed;
+  margin-left: 400px;
+  margin-top: -400px;
+  transition: 3s;
+
+  
+}
